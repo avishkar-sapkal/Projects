@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg-Changer</title>
+</head>
+<style>
+    body{
+        background-color: dimgrey;
+        color: black;
+    }
+    .all{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+    button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: brown;
+    background-color: brown;
+    border-radius: 50px;
+    }
+</style>
+<body>
+    <div class="all">
+        <h1>Click START to Change the Background and STOP to Pause</h1>
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+    </div>
+</body>
+
+<script>
+    const randomcolor = function () {
+        const hex = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    let changebg = function () {
+        document.body.style.backgroundColor = randomcolor();
+    }
+    let intervalID;
+    const startgenrating = function () {
+        intervalID = setInterval(changebg, 1000)
+    }
+    const stopgenrating = function () {
+        clearInterval(intervalID);
+    }
+    document.querySelector('#start').addEventListener('click', startgenrating);
+    document.querySelector('#stop').addEventListener('click', stopgenrating); 
+</script>
+</html>
