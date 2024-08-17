@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Poppins;
+}
+
+button {
+    height: 50px;
+    width: 120px;
+    color: white;
+    border: 2px solid skyblue;
+    border-radius: 26px;
+    font-size: large;
+    cursor: pointer;
+}
+
+.over {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10%;
+}
+
+.nextline {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 20px;
+}
+#ball{
+    margin-top: 50px;
+    font-size: xx-large;
+    text-align: center;
+    color: rgb(215, 243, 8);
+}
+#overs{
+    margin-top: 50px;
+    font-size: xx-large;
+    text-align: center;
+    color: whitesmoke;
+}
+#overscore{
+    margin-top: 25px;
+    font-size: xx-large;
+    text-align: center;
+    color: rgb(200, 243, 113);
+}
+#runs{
+    padding: 50px;
+    font-size: xx-large;
+    text-align: center;
+    color: whitesmoke;
+
+}

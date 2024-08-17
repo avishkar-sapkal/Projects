@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANDOM NUMBERS</title>
+    <style>
+        body {
+            background-color: #080000;
+            color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .number {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="number">
+        <h1>GENERATING RANDOM NUMBERS</h1>
+        <h3 id="random-num"></h3>
+        <h2>Press * to Stop</h2>
+    </div>
+    <script>
+        function randomNumberGenerating() {
+            const number = Math.floor(Math.random() * 100);
+            document.getElementById('random-num').innerText = number;
+        }
+
+        let num;
+
+        function startGenerating() {
+            num = setInterval(randomNumberGenerating, 1000);
+        }
+
+        function stopGenerating(event) {
+            if (event.key === '*') {
+                clearInterval(num);
+                document.getElementById('random-num').textContent = 'Stopped';
+                document.removeEventListener('keydown', stopGenerating);
+            }
+        }
+
+        document.addEventListener('keydown', stopGenerating);
+        startGenerating();
+    </script>
+</body>
+</html>
