@@ -1,0 +1,44 @@
+h1{
+    padding-top: 100px;
+    color: whitesmoke;
+    text-align: center;
+}
+#pink {
+    width: 150px;
+    height: 150px;
+    background-color: palevioletred;
+    cursor: pointer;
+}
+
+#black {
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    cursor: pointer;
+}
+
+#green {
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    cursor: pointer;
+}
+
+#orange {
+    width: 150px;
+    height: 150px;
+    background-color: orangered;
+    cursor: pointer;
+}
+
+.alldiv {
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+    margin: 100px auto;
+}
+
+h3{
+    color: whitesmoke;
+    text-align: center;
+}
